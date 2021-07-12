@@ -7,7 +7,7 @@ export const store = new Vuex.Store({
   state: {
     contador: 0,
   },
-  mutatios: {
+  mutations: {
     sumar(state) {
       state.contador++;
     },
@@ -19,5 +19,3 @@ export const store = new Vuex.Store({
 
 store.commit("sumar");
 store.commit("restar");
-// store.commit((type: "sumar"));
-// store.commit((type: "restar"));

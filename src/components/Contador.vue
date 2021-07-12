@@ -1,8 +1,8 @@
 <template>
   <div>
     <p>El valor del contador es : {{ this.$store.state.contador }}</p>
-    <button>Sumar</button>
-    <button>Restar</button>
+    <button @click="Sumar">Sumar</button>
+    <button @click="Restar">Restar</button>
   </div>
 </template>
 
@@ -11,6 +11,14 @@ import { store } from "../store/store";
 export default {
   name: "Contador",
   store,
+  methods: {
+    Sumar() {
+      this.$store.commit("sumar");
+    },
+    Restar() {
+      this.$store.commit("restar");
+    },
+  },
 };
 </script>
 
