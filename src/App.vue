@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <Contador></Contador>
+    <p>Tu nombre es : {{ nombre }}</p>
+    <p>Tu edad es : {{ edad }}</p>
+    <Contador> Ejemplo de Vuex </Contador>
   </div>
 </template>
 
 <script>
 import Contador from "./components/Contador";
-
+import { mapState } from "vuex";
 export default {
   name: "App",
   components: {
     Contador,
   },
+  computed: mapState({
+    nombre: (state) => state.nombre,
+    edad: (state) => state.edad,
+  }),
 };
 </script>
 
