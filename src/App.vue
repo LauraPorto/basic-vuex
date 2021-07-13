@@ -5,18 +5,21 @@
     <Contador></Contador>
     <h1>Estas son tus películas :</h1>
     <Peliculas></Peliculas>
+    <Listado></Listado>
   </div>
 </template>
 
 <script>
 import Contador from "./components/Contador";
 import Peliculas from "./components/Peliculas";
+import Listado from "./components/Listado";
 import { mapState } from "vuex";
 export default {
   name: "App",
   components: {
     Contador,
     Peliculas,
+    Listado,
   },
   computed: mapState({
     nombre: (state) => state.nombre,

@@ -9,8 +9,8 @@ export const store = new Vuex.Store({
     nombre: "Laura",
     edad: 27,
     peliculas: [
-      { titulo: "Pulp Fiction", año: 1994, active: false },
-      { titulo: "La quimera del oro", año: 1925, active: false },
+      { titulo: "Pulp Fiction", año: 1994, active: true },
+      { titulo: "La quimera del oro", año: 1925, active: true },
       { titulo: "Miedo y asco en Las Vegas", año: 1998, active: false },
       { titulo: "Blade Runner", año: 1982, active: false },
     ],
@@ -21,6 +21,11 @@ export const store = new Vuex.Store({
     },
     restar(state) {
       state.contador--;
+    },
+  },
+  getters: {
+    listadodeactivos: (state) => {
+      return state.peliculas.filter((pelicula) => pelicula.active).length;
     },
   },
 });
