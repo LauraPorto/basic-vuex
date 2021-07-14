@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Usuarios></Usuarios>
-    <p>Nombre : {{ nombre }}</p>
-    <p>Edad : {{ edad }}</p>
+    <p>Titulo : {{ titulo }}</p>
+    <p>Id de cliente : {{ id }}</p>
     <Contador></Contador>
     <h1>Estas son tus películas :</h1>
     <Peliculas></Peliculas>
@@ -25,8 +25,8 @@ export default {
     Usuarios,
   },
   computed: mapState({
-    nombre: (state) => state.nombre,
-    edad: (state) => state.edad,
+    titulo: (state) => state.titulo,
+    id: (state) => state.id,
   }),
 };
 </script>

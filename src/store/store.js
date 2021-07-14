@@ -6,8 +6,8 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     contador: 0,
-    nombre: "Laura",
-    edad: 27,
+    titulo: "Cliente",
+    id: 27,
     user: null,
     peliculas: [
       { titulo: "Pulp Fiction", año: 1994, active: true },
@@ -28,10 +28,8 @@ export const store = new Vuex.Store({
       const result = await axios.get(
         `https://rickandmortyapi.com/api/character/${random}`
       );
-      this.user = result.data;
-      console.log(this.user, "resultado llamada axios");
-      console.log(this.user.id, "esto es el state");
-      return state.user;
+      console.log(result.data, "esto es el state");
+      state.user = result.data;
     },
   },
   actions: {
