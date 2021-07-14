@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <p>Tu nombre es : {{ nombre }}</p>
-    <p>Tu edad es : {{ edad }}</p>
+    <Usuarios></Usuarios>
+    <p>Nombre : {{ nombre }}</p>
+    <p>Edad : {{ edad }}</p>
     <Contador></Contador>
     <h1>Estas son tus películas :</h1>
     <Peliculas></Peliculas>
@@ -13,6 +14,7 @@
 import Contador from "./components/Contador";
 import Peliculas from "./components/Peliculas";
 import Listado from "./components/Listado";
+import Usuarios from "./components/Usuarios";
 import { mapState } from "vuex";
 export default {
   name: "App",
@@ -20,6 +22,7 @@ export default {
     Contador,
     Peliculas,
     Listado,
+    Usuarios,
   },
   computed: mapState({
     nombre: (state) => state.nombre,

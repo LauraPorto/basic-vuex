@@ -22,7 +22,7 @@ export const store = new Vuex.Store({
     restar(state) {
       state.contador--;
     },
-    async getUser(state) {
+    async getUser() {
       const random = Math.floor(Math.random() * (5 - 1) + 1);
       const result = await axios.get(
         `https://rickandmortyapi.com/api/character/${random}`

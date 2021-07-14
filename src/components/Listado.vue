@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Estas son tus películas DISPONIBLES : {{ listadodeactivos }}</h1>
+    <h2>Tienes {{ listadodeactivos }} películas disponibles</h2>
   </div>
 </template>
 

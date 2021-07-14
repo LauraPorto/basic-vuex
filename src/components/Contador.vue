@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>El valor del contador es : {{ this.$store.state.contador }}</p>
+    <p>Contador: {{ this.$store.state.contador }}</p>
     <button @click="Sumar">Sumar</button>
     <button @click="Restar">Restar</button>
   </div>
