@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Este es tu perfil :</h1>
-    <div>{{ result }}</div>
+    <!-- <div>{{ this.user.id }}</div> -->
   </div>
 </template>
 

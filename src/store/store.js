@@ -28,8 +28,9 @@ export const store = new Vuex.Store({
       const result = await axios.get(
         `https://rickandmortyapi.com/api/character/${random}`
       );
-      this.state.user = result.data;
-      console.log(state.user, "resultado llamada axios");
+      this.user = result.data;
+      console.log(this.user, "resultado llamada axios");
+      console.log(this.user.id, "esto es el state");
       return state.user;
     },
   },
