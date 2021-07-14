@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Este es tu perfil :</h1>
+    <div>{{ result }}</div>
   </div>
 </template>
 
@@ -14,6 +15,9 @@ export default {
   },
   methods: {
     ...mapActions(["getCharacter"]),
+  },
+  mounted() {
+    this.getCharacter();
   },
 };
 </script>

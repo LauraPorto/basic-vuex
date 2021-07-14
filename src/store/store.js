@@ -8,6 +8,7 @@ export const store = new Vuex.Store({
     contador: 0,
     nombre: "Laura",
     edad: 27,
+    user: null,
     peliculas: [
       { titulo: "Pulp Fiction", año: 1994, active: true },
       { titulo: "La quimera del oro", año: 1925, active: true },
@@ -22,12 +23,14 @@ export const store = new Vuex.Store({
     restar(state) {
       state.contador--;
     },
-    async getUser() {
-      const random = Math.floor(Math.random() * (5 - 1) + 1);
+    async getUser(state) {
+      const random = Math.floor(Math.random() * (10 - 1) + 1);
       const result = await axios.get(
         `https://rickandmortyapi.com/api/character/${random}`
       );
-      return result.data;
+      this.state.user = result.data;
+      console.log(state.user, "resultado llamada axios");
+      return state.user;
     },
   },
   actions: {
