@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
+import axios from "axios";
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
@@ -21,6 +21,18 @@ export const store = new Vuex.Store({
     },
     restar(state) {
       state.contador--;
+    },
+    async getUser(state) {
+      const random = Math.floor(Math.random() * (5 - 1) + 1);
+      const result = await axios.get(
+        `https://rickandmortyapi.com/api/character/${random}`
+      );
+      return result.data;
+    },
+  },
+  actions: {
+    getCharacter(context) {
+      context.commit("getUser");
     },
   },
   getters: {
